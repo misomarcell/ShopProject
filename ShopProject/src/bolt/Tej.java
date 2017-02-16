@@ -3,9 +3,7 @@ package bolt;
 import java.time.LocalDate;
 import java.util.Date;
 
-public class Tej {
-
-	protected long vonalkod;
+public abstract class Tej {
 	
 	final int LITER;
 	final int FELLITER;
@@ -13,6 +11,7 @@ public class Tej {
 	final double ZSIROS;
 	final double FELZSIROS;
 	
+	protected long vonalkod;
 	protected int urtartalom;
 	protected String gyarto;
 	protected Date szavatossagiIdo;
