@@ -7,7 +7,6 @@ public class Bolt {
 	private String cim;
 	private String tulajdonos;
 	private Hashtable tejpult;
-	private int flag;
 	
 	public Bolt(String nev, String cim, String tulajdonos, Hashtable tejpult) {
 		super();
