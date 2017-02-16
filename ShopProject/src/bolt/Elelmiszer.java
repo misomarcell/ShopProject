@@ -2,15 +2,12 @@ package bolt;
 
 import java.util.Date;
 
-public class Elelmiszer {
-	private Long vonalKod;
-	private String gyarto;
-	private Date szavatossagiIdo;
+public class Elelmiszer extends Aru{
+	
+	protected Date szavatossagiIdo;
 	
 	public Elelmiszer(Long vonalKod, String gyarto, Date szavatossagiIdo) {
-		super();
-		this.vonalKod = vonalKod;
-		this.gyarto = gyarto;
+		super(vonalKod, gyarto);
 		this.szavatossagiIdo = szavatossagiIdo;
 	}
 

@@ -1,57 +1,24 @@
 package bolt;
 
-import java.time.LocalDate;
 import java.util.Date;
 
-public abstract class Tej {
-	
-	final int LITER;
-	final int FELLITER;
-	final int POHAR;
-	final double ZSIROS;
-	final double FELZSIROS;
-	
-	protected long vonalkod;
+public abstract class Tej extends Elelmiszer{
+	public final int LITER = 1;
+	public final double FELLITER = 0.5;
+	public final double POHAR = 0.25;
+	public final double ZSIROS = 2.8;
+	public final double FELZSIROS = 1.5;
 	protected int urtartalom;
-	protected String gyarto;
-	protected Date szavatossagiIdo;
 	protected double zsirtartalom;
 	
-	public Tej(long vonalkod, int urtartalom, String gyarto, Date szavatossag, double zsirtartalom) {
-
-		this.vonalkod = vonalkod;
-		
+	public Tej(Long vonalKod, String gyarto, Date szavatossagiIdo,int urtartalom,double zsirtartalom) {
+		super(vonalKod, gyarto, szavatossagiIdo);
 		this.urtartalom = urtartalom;
-		this.gyarto = gyarto;
-		this.szavatossagiIdo = szavatossag;
 		this.zsirtartalom = zsirtartalom;
-	}
-	
-	public long getVonalkod()
-	{
-		return vonalkod;
-	}
-	
-	public boolean joMeg()
-	{
-		Date currentDate = new Date();
-		if (getSzavatossagiIdo().before(currentDate))
-		{
-			return true;
-		}
-		return false;
 	}
 	
 	public int getUrtartalom() {
 		return urtartalom;
-	}
-
-	public String getGyarto() {
-		return gyarto;
-	}
-
-	public Date getSzavatossagiIdo() {
-		return szavatossagiIdo;
 	}
 
 	public double getZsirtartalom() {
